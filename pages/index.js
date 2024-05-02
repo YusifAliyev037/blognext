@@ -4,6 +4,7 @@ import { Box, Text,Button,SimpleGrid } from "@chakra-ui/react"
 import { useRouter } from "next/router";
 import { ROUTER } from "@/shared/constant/router";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 
 const Header = dynamic(()=>import('@/shared/components/Header'),{ssr:false})
 
@@ -13,6 +14,9 @@ export default function Home() {
   
   return (
     <>
+      <Head>
+      <title>Home</title>
+    </Head>
     <Header/>
     
       <MetaSeo title="Home" desc={"Lorem"}/>

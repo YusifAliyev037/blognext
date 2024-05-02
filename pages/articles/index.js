@@ -1,6 +1,7 @@
 import { getBlogs } from '@/Services/articles'
 import { Box, SimpleGrid } from '@chakra-ui/react'
 import dynamic from 'next/dynamic'
+import Head from 'next/head'
 
 
 const Searchbox = dynamic(()=>import('@/shared/components/SearchBox/searchbox'),{ssr:false})
@@ -15,6 +16,9 @@ function Article({data}) {
 
   return (
     <>
+    <Head>
+      <title>Home</title>
+    </Head>
     <Header />
       <Box as='section' px={50}>
       <Breadcrumbs/>
