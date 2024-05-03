@@ -67,8 +67,8 @@ function Header() {
           variant="ghost"
           cursor="pointer"
           as="li"
-          color={isActive(ROUTER.ABOUT)}
-          onClick={() => push(ROUTER.ABOUT)}
+          color={isActive("/about")}
+          onClick={() => push("/about")}
         >
           About
         </Button>
@@ -76,8 +76,8 @@ function Header() {
           variant="ghost"
           cursor="pointer"
           as="li"
-          color={isActive(ROUTER.FAV)}
-          onClick={() => push(ROUTER.FAV)}
+          color={isActive("/favorites")}
+          onClick={() => push("/favorites")}
         >
           Favorites
           {!!favCount && (

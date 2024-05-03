@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
   <ChakraProvider>
     <Provider store={store}>
     <QueryClientProvider client={queryClient}>
-    <Component {...pageProps} />;
+    <Component {...pageProps} />
     <ProgressBar height="4px"
         color="#fffd00"/>
     </QueryClientProvider>

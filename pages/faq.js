@@ -8,7 +8,10 @@ import {
     Box,
     Text
   } from '@chakra-ui/react'
-import Header from '@/shared/components/Header'
+import Head from 'next/head'
+import dynamic from 'next/dynamic'
+const Header = dynamic(()=>import('@/shared/components/Header'),{ssr:false})
+
 function Faq() {
   return (
     <> 
