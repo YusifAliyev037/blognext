@@ -19,7 +19,7 @@ export default function Home() {
     </Head>
     <Header/>
     
-      <MetaSeo title="Home" desc={"Lorem"}/>
+      <MetaSeo title="Home" desc={"Welcome to my Blog App!"}/>
     <SimpleGrid bg="gray.50" columns={{sm:2}} spacing="2" p="10" >
 
 <Box as="main" display="flex" flexDirection="column" justifyContent="flex-start" gap="16px">

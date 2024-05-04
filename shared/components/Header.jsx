@@ -7,7 +7,9 @@ import { selFavorites } from "@/redux/global/globalSlice";
 import { useRouter } from "next/router";
 
 function Header() {
-  const {push,asPath} = useRouter()
+  const {push,asPath, query} = useRouter()
+
+  const color = query?.color ?? "success"
 
   const favorites = useSelector(selFavorites);
 
@@ -98,10 +100,10 @@ function Header() {
       </Stack>
 
       <ButtonGroup>
-        <Button onClick={() => push(ROUTER.ARTICLE_CREATE)} as="button">
+        <Button onClick={() => push("/articles/create")} as="button">
           Create
         </Button>
-        <Button onClick={() => push(ROUTER.SETTING)} as="button">
+        <Button colorScheme={color} onClick={() => push("/setting")} as="button">
           Setting
         </Button>
       </ButtonGroup>
